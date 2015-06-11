@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 @import url("//fonts.googleapis.com/css?family=Tangerine");
-@import url("//fonts.googleapis.com/css?family=Bangers");
+@import url("//fonts.googleapis.com/css?family=Sigmar+One");
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em; }
@@ -2837,8 +2837,7 @@ h6 {
   font-size: 1rem; }
 
 h7 {
-  font-family: "Bangers", cursive;
-  color: #7f0a0c;
+  font-family: "Sigmar One", cursive;
   font-size: 2.125rem; }
 
 hr {
