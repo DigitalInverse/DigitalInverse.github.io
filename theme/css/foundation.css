@@ -33,7 +33,7 @@ body {
 
 body {
   background: white;
-  color: #FF0000;
+  color: #222222;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -2814,6 +2814,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
+  font-family: "Tangerine", serif;
   font-size: 2.125rem; }
 
 h2 {
