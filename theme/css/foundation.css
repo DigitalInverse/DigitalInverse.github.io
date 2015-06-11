@@ -2799,7 +2799,7 @@ p {
     font-style: italic; }
 
 /* Default header styles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h7 {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -2834,6 +2834,9 @@ h5 {
 
 h6 {
   font-size: 1rem; }
+
+h7 {
+  font-size: 2.125rem; }
 
 hr {
   border: solid #dddddd;
