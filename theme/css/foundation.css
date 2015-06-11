@@ -1,4 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em; }
@@ -2813,6 +2814,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
+  font-family: 'Tangerine', serif;
+  text-shadow: 4px 4px 4px #aaa;
   font-size: 2.125rem; }
 
 h2 {
