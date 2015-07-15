@@ -10,8 +10,8 @@ article { padding-left:1em; }
 
 /* Base.html - top navigation */
 .top-bar {
-/* 2BA6E3 #2B0034 */
-background: #EEC591; /* Header color */
+/* 2BA6E3 #2B0034 EEC591 */
+background: #606060; /* Header color */
 height: 100%; 
 margin-bottom: 1em; 
 }
