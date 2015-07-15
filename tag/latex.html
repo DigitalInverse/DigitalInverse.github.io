@@ -79,7 +79,8 @@ standard LaTeX editors such as
 <p><a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a></p>
 <h1>Images</h1>
 <p><a href="http://www.texample.net/tikz/examples">TikZ</a></p>
-<h1>My Standard Template</h1>
+<h1>Standard Template</h1>
+<p>Here is what my typical LaTeX-document looks like</p>
 <div class="highlight"><pre><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="nb">{</span>article<span class="nb">}</span>
 
 <span class="c">% setup fonts</span>
@@ -98,7 +99,7 @@ standard LaTeX editors such as
 
 <span class="c">% setup front matter</span>
 <span class="k">\author</span><span class="nb">{</span>Anders Hansson<span class="nb">}</span>
-<span class="k">\title</span><span class="nb">{</span>My Standard Preamble<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>My Standard <span class="k">\LaTeX\ </span>Template<span class="nb">}</span>
 
 <span class="c">% setup headers and footers</span>
 <span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
@@ -140,29 +141,38 @@ Here goes the abstract.
 <span class="k">\href</span><span class="nb">{</span>http://julialang.org/<span class="nb">}{</span>Julia<span class="nb">}</span> is a high-level, high-performance
 dynamic programming language for technical computing, with syntax that
 is similar to MATLAB. See Fig.~<span class="k">\ref</span><span class="nb">{</span>fig:image<span class="nb">}</span> for an illustrative
-example, and read <span class="k">\cite</span><span class="nb">{</span>parkvall<span class="nb">}</span> for more information about LTE. The
-rate for MIMO stream <span class="s">$</span><span class="nb">i</span><span class="s">$</span> can then be written as
-<span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>eq:rate<span class="nb">}</span> R<span class="nb">_</span>i = <span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>K<span class="nb">}</span> <span class="k">\sum</span><span class="nb">_{</span>k=0<span class="nb">}^{</span>K-1<span class="nb">}</span>
-<span class="k">\log</span><span class="nb">_{</span>2<span class="nb">}</span> (1 + E<span class="nb">_</span>s<span class="nb">{</span><span class="k">\bf</span> H<span class="nb">}_</span>i<span class="nb">^</span>H(k)<span class="nb">{</span><span class="k">\bf</span> R<span class="nb">}_{</span>I,i<span class="nb">}^{</span>-1<span class="nb">}</span>(k)<span class="nb">{</span><span class="k">\bf</span> H<span class="nb">}_</span>i(k)),
+example of a person playing a brass instrument. David Barber has written a
+textbook on probabilistic inference in graphical models <span class="k">\cite</span><span class="nb">{</span>barber<span class="nb">}</span>.
+An MMSE estimate <span class="s">$</span><span class="nv">\hat</span><span class="nb">{u}_k</span><span class="s">$</span> of the quantity measured by sensor <span class="s">$</span><span class="nb">k</span><span class="s">$</span>
+can be expressed as the quantized value corresponding to index <span class="s">$</span><span class="nb">i_k</span><span class="s">$</span>,
+which we denote <span class="s">$</span><span class="nv">\tilde</span><span class="nb">{u}</span><span class="o">(</span><span class="nb">i_k</span><span class="o">)</span><span class="s">$</span>, conditioned on the total observation
+vector <span class="s">$</span><span class="nb">{</span><span class="nv">\bf</span><span class="nb"> y}_</span><span class="m">1</span><span class="nb">^K</span><span class="s">$</span>,
+<span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>eq:mmse<span class="nb">}</span>
+<span class="k">\hat</span><span class="nb">{</span>u<span class="nb">}_</span>k <span class="nb">&amp;</span>= E<span class="k">\{\tilde</span><span class="nb">{</span>u<span class="nb">}</span>(i<span class="nb">_</span>k)|<span class="nb">{</span><span class="k">\bf</span> y<span class="nb">}_</span>1<span class="nb">^</span>K<span class="k">\}</span> = <span class="k">\sum</span><span class="nb">_{</span><span class="k">\forall</span> i<span class="k">\in</span> <span class="k">\mathcal</span><span class="nb">{</span>A<span class="nb">}}</span> <span class="k">\tilde</span><span class="nb">{</span>u<span class="nb">}</span>(i)<span class="k">\Pr</span>(i<span class="nb">_</span>k=i|<span class="nb">{</span><span class="k">\bf</span> y<span class="nb">}_</span>1<span class="nb">^</span>K) <span class="k">\nonumber\\</span>
+<span class="nb">&amp;</span>= <span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>p(<span class="nb">{</span><span class="k">\bf</span> y<span class="nb">}_</span>1<span class="nb">^</span>K)<span class="nb">}</span><span class="k">\sum</span><span class="nb">_{</span><span class="k">\forall</span> i<span class="k">\in\mathcal</span><span class="nb">{</span>A<span class="nb">}}</span><span class="k">\tilde</span><span class="nb">{</span>u<span class="nb">}</span>(i)<span class="k">\sum</span><span class="nb">_{</span><span class="k">\forall</span><span class="nb">{</span><span class="k">\bf</span> i<span class="nb">}_</span>1<span class="nb">^</span>K<span class="k">\in\mathcal</span><span class="nb">{</span>A<span class="nb">}^</span>K : i<span class="nb">_</span>k=i<span class="nb">}</span> <span class="k">\Pr</span>(<span class="nb">{</span><span class="k">\bf</span> i<span class="nb">}_</span>1<span class="nb">^</span>K)<span class="k">\:</span>p(<span class="nb">{</span><span class="k">\bf</span> y<span class="nb">}_</span>1<span class="nb">^</span>K|<span class="nb">{</span><span class="k">\bf</span> i<span class="nb">}_</span>1<span class="nb">^</span>K).
 <span class="k">\end</span><span class="nb">{</span>align<span class="nb">}</span>
+Equation (<span class="k">\ref</span><span class="nb">{</span>eq:mmse<span class="nb">}</span>) follows directly from Bayes&#39; rule.
+
+<span class="k">\bigskip\bigskip</span>
 
 <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h]
 <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
-<span class="k">\includegraphics</span><span class="na">[width=0.6\textwidth]</span><span class="nb">{</span>image.png<span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="na">[width=0.8\textwidth]</span><span class="nb">{</span>image.png<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
-<span class="k">\caption</span><span class="nb">{</span>Here goes the figure caption.<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>This picture was photographed by <span class="k">\href</span><span class="nb">{</span>http://gratisography.com<span class="nb">}{</span>Ryan McGuire<span class="nb">}</span> and is free of copyright restrictions.<span class="nb">}</span>
 <span class="k">\label</span><span class="nb">{</span>fig:image<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 
 <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h]
 <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
 <span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
-    <span class="k">\draw</span> [draw=black, fill=yellow, fill opacity=0.2]
+    <span class="k">\draw</span> [draw=black, fill=green, fill opacity=0.2]
        (0,0) -- (0.5,1.5) -- (3,2) -- cycle;
        <span class="k">\draw</span> [&lt;-&gt;,thick] (0,2.5) node (yaxis) [above] <span class="nb">{</span><span class="s">$</span><span class="nb">y</span><span class="s">$</span><span class="nb">}</span>
         |- (3.5,0) node (xaxis) [right] <span class="nb">{</span><span class="s">$</span><span class="nb">x</span><span class="s">$</span><span class="nb">}</span>;
 <span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>This image was created with the help of <span class="k">\href</span><span class="nb">{</span>http://www.texample.net/tikz<span class="nb">}{</span>TikZ<span class="nb">}</span>.<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 
 <span class="k">\clearpage</span>
@@ -172,6 +182,7 @@ rate for MIMO stream <span class="s">$</span><span class="nb">i</span><span clas
 </pre></div>
 
 
+<p>which results in the <a href="{attach}/downloads/latex.pdf">Downloadable File</a>.</p>
 <h1>Formatting</h1>
 <p><a href="http://www.komascript.de">KOMA-Script</a> is a great bundle of LaTeX classes and packages. The offcial documentation is in German, and so the <a href="https://www.ctan.org/tex-archive/macros/latex/contrib/memoir">memoir class</a> could be an alternative for the non-speaking crowd.</p><p class="subheader">Category: <a href="http://digitalinverse.github.io/category/latex.html">LaTeX</a>
 
