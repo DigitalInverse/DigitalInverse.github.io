@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="http://digitalinverse.github.io/theme/css/normalize.css" />
     <link rel="stylesheet" href="http://digitalinverse.github.io/theme/css/foundation.css" /> <!-- instead of foundation.min.css -->
     <link rel="stylesheet" href="http://digitalinverse.github.io/theme/css/style.css" />
+    <link rel="stylesheet" href="http://digitalinverse.github.io/theme/tipuesearch/tipuesearch.css">
     <link rel="stylesheet" href="http://digitalinverse.github.io/theme/css/solarizedtweak.css" /> <!-- perldoc, solarizedlight --> 
     <script src="http://digitalinverse.github.io/theme/js/modernizr.js"></script>
     
@@ -21,7 +22,10 @@
 <div class="top-bar">
 <div class="row">
     <div class="large-9 large-centered columns">
-	    <h7><a href="http://digitalinverse.github.io">Digital Inverse</a></h7>
+      <h7><a href="http://digitalinverse.github.io">Digital Inverse</a></h7>
+    <form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+      <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
+    </form>
     </div>
 </div>
 </div>

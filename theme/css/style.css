@@ -31,6 +31,19 @@ text-transform: uppercase;
 .side-nav li a { color: #222}
 .side-nav { padding: 0.5em 0; }
 
+#searchform { float: right; margin-top: 10px; }
+
+#searchbox {
+    background-color: #EEEEEE;
+    border: 1px solid #F5F4EF;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    height: 30px;
+    padding: 4px;
+    margin: 0px 15px;
+    vertical-align: top;
+}
 
 /* Index.html - posts */
 h3.article-title {
